@@ -22,7 +22,7 @@ fi
 echo "正在下载内核文件"
 # core_real_url=$(curl https://blog.thinker.ink/get_lanzou_link/?url=https://www.lanzous.com/i7jyzje -s)
 # wget -O /etc/v2rayL/v2ray-core.tar ${core_real_url:1:-1}
-cp ${SHELL_FOLDER}/v2ray-core.tar /etc/v2rayL
+cp ${SHELL_FOLDER}/resources/v2ray-core.tar /etc/v2rayL
 cd /etc/v2rayL
 tar -xvf v2ray-core.tar 1>/dev/null
 cp /etc/v2rayL/v2ray-core/{geoip.dat,geosite.dat,v2ctl,v2ray,v2ray.sig,v2ctl.sig,h2y.dat} /usr/bin/v2rayL
@@ -63,7 +63,7 @@ sudo apt-get install zbar-tools -y
 current_user=$USER
 echo "设置桌面图标"
 # sudo wget -P /usr/share/applications http://cloud.thinker.ink/download/v2rayL.desktop
-cp ${SHELL_FOLDER}/resources/v2rayL.desktop /usr/shar/applications/
+cp ${SHELL_FOLDER}/resources/v2rayL.desktop /usr/share/applications/
 sudo chmod u+x /usr/share/applications/v2rayL.desktop
 echo "$current_user ALL=NOPASSWD:/bin/systemctl restart v2rayL.service,/bin/systemctl start v2rayL.service,/bin/systemctl stop v2rayL.service,/bin/systemctl status v2rayL.service,/bin/systemctl enable v2rayL.service,/bin/systemctl disable v2rayL.service,/bin/bash /etc/v2rayL/add.sh,/bin/bash /etc/v2rayL/remove.sh" | sudo tee -a /etc/sudoers
 sudo systemctl enable v2rayL.service
