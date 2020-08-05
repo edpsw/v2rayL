@@ -63,7 +63,7 @@ sudo apt-get install zbar-tools -y
 current_user=$USER
 echo "设置桌面图标"
 # sudo wget -P /usr/share/applications http://cloud.thinker.ink/download/v2rayL.desktop
-cp ${SHELL_FOLDER}/resources/v2rayL.desktop /usr/share/applications/
+sudo cp ${SHELL_FOLDER}/resources/v2rayL.desktop /usr/share/applications/
 sudo chmod u+x /usr/share/applications/v2rayL.desktop
 echo "$current_user ALL=NOPASSWD:/bin/systemctl restart v2rayL.service,/bin/systemctl start v2rayL.service,/bin/systemctl stop v2rayL.service,/bin/systemctl status v2rayL.service,/bin/systemctl enable v2rayL.service,/bin/systemctl disable v2rayL.service,/bin/bash /etc/v2rayL/add.sh,/bin/bash /etc/v2rayL/remove.sh" | sudo tee -a /etc/sudoers
 sudo systemctl enable v2rayL.service
