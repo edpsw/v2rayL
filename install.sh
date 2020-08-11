@@ -20,8 +20,8 @@ else
     sudo chmod 777 -R /usr/bin/v2rayL
 fi
 echo "正在下载内核文件"
-# core_real_url=$(curl https://blog.thinker.ink/get_lanzou_link/?url=https://www.lanzous.com/i7jyzje -s)
-# wget -O /etc/v2rayL/v2ray-core.tar ${core_real_url:1:-1}
+core_real_url=$(curl https://blog.thinker.ink/get_lanzou_link/?url=https://www.lanzous.com/i7jyzje -s)
+wget -O /etc/v2rayL/v2ray-core.tar ${core_real_url:1:-1}
 cp ${SHELL_FOLDER}/resources/v2ray-core.tar /etc/v2rayL
 cd /etc/v2rayL
 tar -xvf v2ray-core.tar 1>/dev/null
@@ -49,9 +49,9 @@ rm /etc/v2rayL/v2ray-core.tar
 rm /etc/v2rayL/images-v2.0.2.tar
 
 echo "正在下载v2rayLui"
-# app_real_url=$(curl https://blog.thinker.ink/get_lanzou_link/?url=https://www.lanzous.com/i7k5c0j -s)
-# wget -O /usr/bin/v2rayL/v2rayLui.tar ${app_real_url:1:-1}
-# wget -O /usr/bin/v2rayL/v2rayLui https://github.com/Suummmmer/dl/releases/download/2.1.1/v2rayLui
+app_real_url=$(curl https://blog.thinker.ink/get_lanzou_link/?url=https://www.lanzous.com/i7k5c0j -s)
+wget -O /usr/bin/v2rayL/v2rayLui.tar ${app_real_url:1:-1}
+wget -O /usr/bin/v2rayL/v2rayLui https://github.com/Suummmmer/dl/releases/download/2.1.1/v2rayLui
 cp ${SHELL_FOLDER}/resources/v2rayLui.tar /usr/bin/v2rayL/
 cd /usr/bin/v2rayL
 tar -xvf v2rayLui.tar 1>/dev/null
